@@ -1,0 +1,14 @@
+query HelloQuery($limit: Int!, $seed: Int!) {
+  hello
+  events(limit: $limit, seed: $seed) {
+    id
+    title
+    payload {
+      __typename
+      ... on TextPayload {
+        message
+        severity
+      }
+    }
+  }
+}

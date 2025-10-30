@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: color-mix(in srgb, Canvas 90%, Highlight 10%);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, Canvas 80%, Highlight 20%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.summary .label {
+  display: block;
+  font-size: 0.85rem;
+  color: GrayText;
+  margin-bottom: 0.25rem;
+}
+
+.summary .value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.progress-wrapper {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+progress {
+  width: 100%;
+  height: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid color-mix(in srgb, Canvas 70%, Highlight 30%);
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+tbody tr:nth-child(even) {
+  background: color-mix(in srgb, Canvas 85%, Highlight 15%);
+}
+
+#history {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#history li {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, Canvas 85%, Highlight 15%);
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  justify-content: space-between;
+}

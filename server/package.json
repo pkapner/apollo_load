@@ -1,0 +1,17 @@
+{
+  "name": "apollo-load-graphql-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "graphql": "^16.8.1",
+    "graphql-type-json": "^0.3.2"
+  }
+}

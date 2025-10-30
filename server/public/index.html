@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apollo Load Test Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Apollo Load Test Monitor</h1>
+      <p>Live metrics forwarded from the Kotlin stress harness.</p>
+    </header>
+    <section class="summary">
+      <div>
+        <span class="label">Total Requests</span>
+        <span id="totalRequests" class="value">–</span>
+      </div>
+      <div>
+        <span class="label">Completed</span>
+        <span id="completed" class="value">–</span>
+      </div>
+      <div>
+        <span class="label">Errors</span>
+        <span id="errors" class="value">–</span>
+      </div>
+      <div>
+        <span class="label">Error Rate</span>
+        <span id="errorRate" class="value">–</span>
+      </div>
+      <div>
+        <span class="label">Throughput</span>
+        <span id="throughput" class="value">–</span>
+      </div>
+      <div>
+        <span class="label">Elapsed</span>
+        <span id="elapsed" class="value">–</span>
+      </div>
+      <div>
+        <span class="label">Load Scale</span>
+        <span id="loadScale" class="value">1×</span>
+      </div>
+      <div>
+        <span class="label">Event Limit</span>
+        <span id="eventLimit" class="value">–</span>
+      </div>
+      <div>
+        <span class="label">Cache Writes</span>
+        <span id="cacheWrites" class="value">0</span>
+      </div>
+      <div>
+        <span class="label">Cache Hits</span>
+        <span id="cacheHits" class="value">0</span>
+      </div>
+      <div>
+        <span class="label">Cache Misses</span>
+        <span id="cacheMisses" class="value">0</span>
+      </div>
+      <div>
+        <span class="label">Cache Hit Rate</span>
+        <span id="cacheHitRate" class="value">–</span>
+      </div>
+      <div>
+        <span class="label">Bytes Processed</span>
+        <span id="bytesProcessed" class="value">0</span>
+      </div>
+      <div class="progress-wrapper">
+        <span class="label">Progress</span>
+        <progress id="progressBar" max="1" value="0"></progress>
+      </div>
+      <div>
+        <span class="label">Last Update</span>
+        <span id="lastUpdate" class="value">–</span>
+      </div>
+    </section>
+    <section>
+      <h2>Worker Progress</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Worker</th>
+            <th>Iterations Completed</th>
+          </tr>
+        </thead>
+        <tbody id="workerTable"></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Recent History</h2>
+      <ul id="history"></ul>
+    </section>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

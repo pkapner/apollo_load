@@ -1,0 +1,21 @@
+schema {
+  query: Query
+}
+
+type Query {
+  hello: String!
+  events(limit: Int!, seed: Int!): [Event!]!
+}
+
+type Event {
+  id: ID!
+  title: String!
+  payload: EventPayload!
+}
+
+union EventPayload = TextPayload
+
+type TextPayload {
+  message: String!
+  severity: Int!
+}

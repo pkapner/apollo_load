@@ -1,0 +1,14 @@
+# Node
+server/node_modules
+server/package-lock.json
+server-run.log
+gradle-8.4/
+
+# Gradle / Kotlin
+client/.gradle
+client/build
+client/out
+client/.idea
+
+# macOS
+.DS_Store
